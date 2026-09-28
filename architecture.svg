@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" font-family="system-ui,Segoe UI,Arial,sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Baird Systems platform architecture</title>
+  <style>
+    .box{fill:#fff;stroke:#d5dae2;stroke-width:1.5}
+    .hl{fill:#e8eefc;stroke:#1f4fd1;stroke-width:1.5}
+    .h{font-size:14px;font-weight:700;fill:#121417}
+    .s{font-size:11.5px;fill:#5b6472}
+    .ln{stroke:#9aa3b1;stroke-width:1.6;fill:none;marker-end:url(#a)}
+    @media (prefers-color-scheme: dark){
+      .box{fill:#161a20;stroke:#2d333d}.hl{fill:#1a2340;stroke:#7098ff}.h{fill:#eef0f3}.s{fill:#9aa3b1}.ln{stroke:#5b6472}
+    }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#9aa3b1"/></marker></defs>
+
+  <rect class="box" x="190" y="10" width="180" height="50" rx="10"/>
+  <text class="h" x="280" y="32" text-anchor="middle">Visitors</text>
+  <text class="s" x="280" y="49" text-anchor="middle">browser · phone · Remote Desktop · VPN</text>
+  <path class="ln" d="M280 60v24"/>
+
+  <rect class="box" x="160" y="88" width="240" height="46" rx="10"/>
+  <text class="h" x="280" y="108" text-anchor="middle">Cloudflare DNS + router</text>
+  <text class="s" x="280" y="124" text-anchor="middle">dynamic IP kept in sync automatically</text>
+  <path class="ln" d="M280 134v22"/>
+
+  <rect class="hl" x="130" y="160" width="300" height="50" rx="10"/>
+  <text class="h" x="280" y="181" text-anchor="middle">IIS on Windows Server</text>
+  <text class="s" x="280" y="198" text-anchor="middle">HTTPS (Let's Encrypt) · reverse proxy · routing</text>
+
+  <path class="ln" d="M180 210 110 250"/>
+  <path class="ln" d="M380 210 450 250"/>
+
+  <rect class="box" x="20" y="254" width="180" height="56" rx="10"/>
+  <text class="h" x="110" y="277" text-anchor="middle">Public website</text>
+  <text class="s" x="110" y="295" text-anchor="middle">this site · status · contact</text>
+
+  <rect class="hl" x="360" y="254" width="180" height="56" rx="10"/>
+  <text class="h" x="450" y="277" text-anchor="middle">Single sign-on</text>
+  <text class="s" x="450" y="295" text-anchor="middle">Keycloak + Active Directory · per-app</text>
+  <path class="ln" d="M450 310v24"/>
+
+  <rect class="box" x="250" y="338" width="290" height="70" rx="10"/>
+  <text class="h" x="395" y="361" text-anchor="middle">Private apps</text>
+  <text class="s" x="395" y="379" text-anchor="middle">personal desktops · media · files</text>
+  <text class="s" x="395" y="396" text-anchor="middle">dashboards · admin panel · VPN</text>
+
+  <rect class="box" x="20" y="338" width="200" height="70" rx="10"/>
+  <text class="h" x="120" y="361" text-anchor="middle">Operations</text>
+  <text class="s" x="120" y="379" text-anchor="middle">health checks every 5 min</text>
+  <text class="s" x="120" y="396" text-anchor="middle">phone alerts · encrypted backups</text>
+</svg>
